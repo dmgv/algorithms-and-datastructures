@@ -3,8 +3,49 @@
   "version": "1.0.0",
   "description": "A collection of algorithms and data structures built with JavaScript for education purposes.",
   "main": "index.js",
+  "scripts": {
+    "clear": "rimraf lib",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test",
+    "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
+    "coveralls": " npm run test:coverage && nyc npm test && nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
   "repository": "https://dmgv@github.com/dmgv/algorithms-and-datastructures.git",
+  "keywords": [
+    "Algotithms",
+    "tdd",
+    "Data Structure",
+    "Javascript"
+  ],
   "author": "Diego M. G. Vieira <diego.menezzes@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "homepage": "https://github.com/dmgv/spotify-api-wrapper#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.0.4",
+    "nyc": "^11.4.1",
+    "rimraf": "^2.6.2"
+  }
 }
