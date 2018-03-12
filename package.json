@@ -1,0 +1,10 @@
+{
+  "name": "algorithms-and-datastructures",
+  "version": "1.0.0",
+  "description": "A collection of algorithms and data structures built with JavaScript for education purposes.",
+  "main": "index.js",
+  "repository": "https://dmgv@github.com/dmgv/algorithms-and-datastructures.git",
+  "author": "Diego M. G. Vieira <diego.menezzes@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
