@@ -2,7 +2,7 @@ import {expect} from 'chai';
 
 import fibonacci from '../src/fibonacci';
 
-describe.only('Fibinacci', () => {
+describe('Fibinacci', () => {
   it('should have a function', () => {
     expect(fibonacci).to.be.a("function");
   });
