@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sieveOfEratosthenes from '../src/sieveOfEratosthenes.js';
 
-describe.only('Sieve Of Eratosthenes', () => {
+describe('Sieve Of Eratosthenes', () => {
   it('should have a function', () => {
     expect(sieveOfEratosthenes).to.be.a("function");
   });
