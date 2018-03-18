@@ -1,9 +1,9 @@
 import {expect} from 'chai';
 
-import fibonacci from '../src/fibonacci';
+import fibonacci from '../src/Fibonacci';
 
 describe('Fibinacci', () => {
-  it('should have a function', () => {
+  it('should have a fibonacci() function', () => {
     expect(fibonacci).to.be.a("function");
   });
 
@@ -15,7 +15,7 @@ describe('Fibinacci', () => {
     expect(fibonacci(20)).to.equal(6765);
   });
 
-  it('should return 832040 when given 3 0', () => {
+  it('should return 832040 when given 30', () => {
     expect(fibonacci(30)).to.equal(832040);
   });
 });

@@ -1,8 +1,9 @@
 import { expect } from 'chai';
-import isPalindrome from '../src/isPalindrome';
+import isPalindrome from '../src/IsPalindrome';
 
-describe('Is Palidrom', () => {
-  it('should exist the function ', () => {
+describe('Palidrome', () => {
+
+  it('should have a isPadindrome() the function ', () => {
     expect(isPalindrome).to.be.a('function');
   });
 
@@ -13,4 +14,5 @@ describe('Is Palidrom', () => {
   it('should not work when a palindrome is not given', () => {
     expect(isPalindrome('Diego')).to.be.false;
   });
+
 });
