@@ -1,7 +1,12 @@
 import { expect } from 'chai';
-import fizzBuzz from '../src/fizzBuzz';
+import fizzBuzz from '../src/FizzBuzz';
 
 describe('FizzBuzz', () => {
+
+  it('should have a fizzBuzz() function', () => {
+    expect(fizzBuzz).to.be.a("function");
+  });
+
   it('should return `Fizz` when multiple of 3', () => {
     expect(fizzBuzz(3)).to.equal('Fizz');
     expect(fizzBuzz(6)).to.equal('Fizz');
