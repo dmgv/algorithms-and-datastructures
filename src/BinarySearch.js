@@ -1,4 +1,4 @@
-function binarySearch(numArray, key) {
+export default function binarySearch(numArray, key) {
   const middleIdx = Math.floor(numArray.length / 2);
   const middleElem = numArray[middleIdx];
 
@@ -9,5 +9,3 @@ function binarySearch(numArray, key) {
     return binarySearch(numArray.splice(0, middleIdx), key);
   } return false;
 }
-
-export default binarySearch;
